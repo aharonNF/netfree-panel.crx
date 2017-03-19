@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 (function() {
     var countNews = +"11";
 
@@ -323,3 +325,4 @@ function checkImages(cb) {
         cb(null, haveImages);
     });
 }
+})
