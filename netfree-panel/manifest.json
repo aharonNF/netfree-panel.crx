@@ -36,7 +36,7 @@
 			"/js/async/async.min.js"
 		],
 		"pages": ["panel.html"]
-	}
+	},
 	"icons": {
 		"128": "img/icon128.png",
 		"96": "img/icon96.png",
