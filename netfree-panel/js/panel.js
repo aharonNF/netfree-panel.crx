@@ -1,5 +1,15 @@
 $(document).ready(function() {
-
+    
+$.ajax = function(url, callback){
+    var req = new XMLHttpRequest();
+	req.open("GET", url);
+	req.onreadystatechange = handleResponse;
+	req.send(null);
+    function handleResponse(){
+        if(req.readyState == 4) callback(req)
+    }
+}
+    
 (function() {
     var countNews = +"11";
 
