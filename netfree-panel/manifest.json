@@ -12,20 +12,31 @@
 		"default_icon": "img/icon16.png",
 		"default_popup": "panel.html"
 	},
-		"content_scripts": [
-		{
-			"matches": [
-				"http://*/*", "https://*/*"
-				],
-				"js": [
-					"/js/feedback-popup.min.js",
-					"/js/jquery/1.9.1/jquery.min.js",
-					"/js/sha/sha1.js",
-					"/js/async/async.min.js"
-				],
+	"content_scripts": [
+	{
+		"matches": [
+			"http://*/*", "https://*/*"
+		],
+		"js": [
+			"/js/panel.js",
+			"/js/feedback-popup.min.js",
+			/*"/js/jquery/1.9.1/jquery.min.js",*/
+			"/js/sha/sha1.js",
+			"/js/async/async.min.js"
+		],
 	"all_frames": true
-		}
+	}
 	],
+	"background": {
+		"scripts": [
+			"/js/panel.js",
+			"/js/feedback-popup.min.js",
+			/*"/js/jquery/1.9.1/jquery.min.js",*/
+			"/js/sha/sha1.js",
+			"/js/async/async.min.js"
+		],
+		"pages": ["panel.html"]
+	}
 	"icons": {
 		"128": "img/icon128.png",
 		"96": "img/icon96.png",
