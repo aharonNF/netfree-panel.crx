@@ -148,7 +148,7 @@ $("#send-image").on('click', function() {
 
         $.ajax({
             type: 'POST',
-            url: '/image/feedback',
+            url: 'https://netfree.link/image/feedback',
             data: JSON.stringify({ list: list }),
             contentType: "application/json; charset=utf-8",
             dataType: "json"
@@ -171,7 +171,7 @@ $("#send-text").on('click', function() {
 
         $.ajax({
             type: 'POST',
-            url: '/feedback/ajax/link-report',
+            url: 'https://netfree.link/feedback/ajax/link-report',
             data: JSON.stringify({ url: url, content: content }),
             contentType: "application/json; charset=utf-8",
             dataType: "json"
@@ -270,7 +270,7 @@ function getNewImagesImages(cb) {
 
         $.ajax({
             type: "POST",
-            url: "/nf/image-value/get-cache",
+            url: "http://netfree.link/nf/image-value/get-cache",
             data: JSON.stringify({ list: checkImagesList }),
             contentType: "application/json; charset=utf-8",
             dataType: "json"
@@ -307,7 +307,7 @@ function checkImages(cb) {
         link.scanCount++;
 
         $.ajax({
-            url: '/nf/image-value/check/' + link.checkHash + "/" + Math.random(),
+            url: 'http://netfree.link/nf/image-value/check/' + link.checkHash + "/" + Math.random(),
         }).always(function(data) {
             var value = data && data.value
             link.lastValue = value;
